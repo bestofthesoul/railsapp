@@ -81,14 +81,14 @@ copy these html links;
 
 %= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
 <%= link_to "Log In", new_user_session_path, class: "btn btn-success" %>
-
+-------
 # validation
 password controller
 model controller
 database validation
 
 
-view/user/registration/new.html.erb
+#view/user/registration/new.html.erb
 <% content_for  :titile, "Sign Up" %>
 
   <div class="field">
@@ -96,15 +96,35 @@ view/user/registration/new.html.erb
     <%= f.email_field :email, class: "form-control", required: true, autofocus: "true", autofocus: true %>
   </div>
 
-config/routes.rb
+#config/routes.rb
 Rails.application.routes.draw do
   devise_for :users, controllers:  {registrations: "users/registrations", sessions: "users/sessions"}
-
-
   root 'static_pages#welcome'
 end
 
-
+#app/controller/users/sessions_controllers.rb
+  def after_sign_in_path_for(resource_or_scope)
+    private_page_path
+  end
  
+#app/controller/users/registrations_controllers.rb
+  def after_sign_up_path_for(resource)
+    private_page_path
+  end
+
+  <h1>private page</h1>, <invalid page>
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% end %>
+
+-----user authentication
+#class StaticPagesController < ApplicationController
+  before_action :authenticate_user!, only: [:private]
+  # mei you sign in cannot view private page
+
+-----
+
 
 

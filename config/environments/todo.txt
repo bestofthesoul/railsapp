@@ -53,3 +53,14 @@ rails g controller static_pages
       create      app/assets/javascripts/static_pages.coffee
       invoke    scss
       create      app/assets/stylesheets/static_pages.scss
+
+
+delete .scss n .coffee file for static pages
+
+static page controllers --> create welcome method
+create welcome.html.erb under views/static_pages
+config/routes (root ro static_pages#welcome)
+
+
+
+

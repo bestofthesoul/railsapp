@@ -7,5 +7,49 @@ config/environ/production ( config.action_mailer.default_url_options = { host: '
 
 rails g devise user (this user is model)
 rails g devise:views users
+ 	invoke  Devise::Generators::SharedViewsGenerator
+      create    app/views/users/shared
+      create    app/views/users/shared/_links.html.erb
+      invoke  form_for
+      create    app/views/users/confirmations
+      create    app/views/users/confirmations/new.html.erb
+      create    app/views/users/passwords
+      create    app/views/users/passwords/edit.html.erb
+      create    app/views/users/passwords/new.html.erb
+      create    app/views/users/registrations
+      create    app/views/users/registrations/edit.html.erb
+      create    app/views/users/registrations/new.html.erb
+      create    app/views/users/sessions
+      create    app/views/users/sessions/new.html.erb
+      create    app/views/users/unlocks
+      create    app/views/users/unlocks/new.html.erb
+      invoke  erb
+      create    app/views/users/mailer
+      create    app/views/users/mailer/confirmation_instructions.html.erb
+      create    app/views/users/mailer/reset_password_instructions.html.erb
+      create    app/views/users/mailer/unlock_instructions.html.e
 
 rails g devise:controllers users
+      create  app/controllers/users/confirmations_controller.rb
+      create  app/controllers/users/passwords_controller.rb
+      create  app/controllers/users/registrations_controller.rb
+      create  app/controllers/users/sessions_controller.rb
+      create  app/controllers/users/unlocks_controller.rb
+      create  app/controllers/users/omniauth_callbacks_controller.rb
+
+
+
+rails g controller static_pages
+      create  app/controllers/static_pages_controller.rb
+      invoke  erb
+      create    app/views/static_pages
+      invoke  test_unit
+      create    test/controllers/static_pages_controller_test.rb
+      invoke  helper
+      create    app/helpers/static_pages_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/static_pages.coffee
+      invoke    scss
+      create      app/assets/stylesheets/static_pages.scss

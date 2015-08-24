@@ -69,6 +69,13 @@ http://api.rubyonrails.org/classes/ActionView/Helpers/CaptureHelper.html
 <% content_for :title, "testing" %>
 <title><%= yield :title %></title>
 
-#both pair together
+#both pair together (use for cross templating)
 
+------
+#bootstrap
+http://www.bootstrapcdn.com/ (cdn -- contentn distributor network)
+copy these html links;
+1) complete css/html
+2) jquery (https://developers.google.com/speed/libraries/)
+3) complete js/html
 

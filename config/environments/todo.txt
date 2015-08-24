@@ -1,0 +1,11 @@
+bundle install
+gem file (devise gem)
+rails g devise:install
+config/environ/dev (  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 })
+
+config/environ/production ( config.action_mailer.default_url_options = { host: 'your.domain.com'})
+
+rails g devise user (this user is model)
+rails g devise:views users
+
+rails g devise:controllers users

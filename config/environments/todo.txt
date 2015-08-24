@@ -62,5 +62,13 @@ create welcome.html.erb under views/static_pages
 config/routes (root ro static_pages#welcome)
 
 
+----------------
+#CONTENT_FOR 
+http://api.rubyonrails.org/classes/ActionView/Helpers/CaptureHelper.html
+
+<% content_for :title, "testing" %>
+<title><%= yield :title %></title>
+
+#both pair together
 
 

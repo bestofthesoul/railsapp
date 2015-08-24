@@ -79,3 +79,32 @@ copy these html links;
 2) jquery (https://developers.google.com/speed/libraries/)
 3) complete js/html
 
+%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+<%= link_to "Log In", new_user_session_path, class: "btn btn-success" %>
+
+# validation
+password controller
+model controller
+database validation
+
+
+view/user/registration/new.html.erb
+<% content_for  :titile, "Sign Up" %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class: "form-control", required: true, autofocus: "true", autofocus: true %>
+  </div>
+
+config/routes.rb
+Rails.application.routes.draw do
+  devise_for :users, controllers:  {registrations: "users/registrations", sessions: "users/sessions"}
+
+
+  root 'static_pages#welcome'
+end
+
+
+ 
+
+

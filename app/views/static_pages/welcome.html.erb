@@ -1,3 +1,5 @@
 <% content_for :title, "Rails App" %>
 
-<h1>landing page</h1>
+<h1>Welcome page</h1>
+<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+<%= link_to "Log In", new_user_session_path, class: "btn btn-success" %>
